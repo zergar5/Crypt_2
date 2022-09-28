@@ -12,6 +12,8 @@ while (!Reader.IsPrime(numbers[0]) || !Reader.IsPrime(numbers[1]))
 var p = numbers[0];
 var q = numbers[1];
 
+//Кток
+
 var n = Computer.ComputeN(p, q);
 var lambdaN = Computer.ComputeLambdaN(p - 1, q - 1);
 var exp = Computer.GenerateExp(lambdaN);
