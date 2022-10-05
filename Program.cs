@@ -6,6 +6,7 @@ var numbers = Reader.ConsoleRead();
 
 while (!Reader.IsPrime(numbers[0]) || !Reader.IsPrime(numbers[1]))
 {
+    Console.WriteLine("Input p and q: ");
     numbers = Reader.ConsoleRead();
 }
 
