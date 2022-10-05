@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Crypt_2": {
+      "commandName": "Project",
+      "workingDirectory": "..\\Crypt_2"
+    }
+  }
+}

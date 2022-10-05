@@ -2,9 +2,9 @@
 {
     public class RSADecoder
     {
-        static public long Decode(long cipherText, long n, long d)
+        static public List<char> Decode(List<long> cipherText, long n, long d)
         {
-            return (long)Power.FastModPow(cipherText, d, n);
+            return cipherText.Select(c => (char)(long)Power.FastModPow(c, d, n)).ToList();
         }
     }
 }

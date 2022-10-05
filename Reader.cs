@@ -1,4 +1,6 @@
-﻿namespace Crypt_2
+﻿using System.Text;
+
+namespace Crypt_2
 {
     static public class Reader
     {
@@ -9,9 +11,17 @@
                 .Split(" ").Select(x => Convert.ToInt64(x)).ToList();
         }
 
-        static public long PlainTextRead()
+        static public List<char> PlainTextRead(string textFile)
         {
-            return Convert.ToInt64(Console.ReadLine());
+            List<char> text = new List<char>();
+            using (var fileStream = new FileStream(textFile, FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = new StreamReader(fileStream, Encoding.UTF8))
+                {
+                    text = reader.ReadToEnd().ToList();
+                }
+            }
+            return text;
         }
 
         static public bool IsPrime(long number)
